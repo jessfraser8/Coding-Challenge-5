@@ -13,6 +13,25 @@ class Employee {
     calculateAnnualSalary(){
         this.salary *= 12;
         console.log(`Annual Salary: ${this.salary}`);
-        return;
+        return this.salary;
+    }
+}
+
+//Create Manager subclass that inherits from the Employee class.
+class Manager extends Employee {
+    constructor(name, salary, department){
+        super(name, salary);
+        this.department = department;
+        console.log(`Department: ${department}`);
+    }
+
+//Override calculateAnnualSalary method to include a bonus.
+    calculateAnnualSalary() {
+        const baseSalary = super.calculateAnnualSalary();
+        const bonus = .15 * baseSalary;
+        const totalSalary = baseSalary + bonus;
+        console.log(`Bonus: ${bonus}`);
+        console.log(`Total Annual Salary: ${totalSalary}`);
+        return totalSalary;
     }
 }
