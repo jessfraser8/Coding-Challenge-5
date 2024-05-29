@@ -1,2 +1,5 @@
 # Coding Challenge 5
+Employee and Manager Salary Calculation Challenge
+
+Create a JavaScript program to manage employee salaries and extend its functionality to handle specialized salary calculations for managers, including bonuses.
  
