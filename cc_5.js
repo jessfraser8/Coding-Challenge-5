@@ -6,13 +6,13 @@ class Employee {
         this.name = name;
         this.salary = salary;
         console.log(`Emplyee Name: ${name}`);
-        console.log(`Monthly Salary: ${salary}`);
+        console.log(`Monthly Salary: $${salary}`);
     }
 
 //Create method to calculate annual salary.
     calculateAnnualSalary(){
         this.salary *= 12;
-        console.log(`Annual Salary: ${this.salary}`);
+        console.log(`Annual Salary: $${this.salary}`);
         return this.salary;
     }
 }
@@ -30,8 +30,15 @@ class Manager extends Employee {
         const baseSalary = super.calculateAnnualSalary();
         const bonus = .15 * baseSalary;
         const totalSalary = baseSalary + bonus;
-        console.log(`Bonus: ${bonus}`);
-        console.log(`Total Annual Salary: ${totalSalary}`);
+        console.log(`Bonus: $${bonus}`);
+        console.log(`Total Annual Salary: $${totalSalary}`);
         return totalSalary;
     }
 }
+
+//Initiate two manager objects  and calculate annual saleries with bonuses.
+let bob = new Manager("Bob Ross", 6600, "Digital Marketing");
+bob.calculateAnnualSalary();
+
+let debbie = new Manager("Debbie Little", 7205, "Finance");
+debbie.calculateAnnualSalary();
