@@ -5,7 +5,7 @@ class Employee {
     constructor(name, salary){
         this.name = name;
         this.salary = salary;
-        console.log(`Emplyee Name: ${name}`);
+        console.log(`Employee Name: ${name}`);
         console.log(`Monthly Salary: $${salary}`);
     }
 
